@@ -62,8 +62,112 @@
   <pre id="eye"></pre>
 
   <footer>exebit &middot; <a href="https://github.com/Shawdotion/exebit.github.io">source</a></footer>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>boaty and yashwant</title>
+<style>
+  :root {
+    color-scheme: dark;
+    --bg: #0b0c0f;
+    --fg: #e8e8e8;
+    --dim: #6b7280;
+    --accent: #7dd3fc;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: var(--bg);
+    color: var(--fg);
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    text-align: center;
+    gap: 1.75rem;
+    padding: 2rem;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(1.1rem, 4vw, 2rem);
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: lowercase;
+    color: var(--fg);
+  }
+  #eye {
+    font-size: clamp(0.9rem, 2.4vw, 1.4rem);
+    line-height: 1.15;
+    white-space: pre;
+    color: var(--accent);
+    text-shadow: 0 0 18px rgba(125, 211, 252, 0.35);
+    user-select: none;
+  }
+  footer {
+    font-size: 0.75rem;
+    color: var(--dim);
+    letter-spacing: 0.04em;
+  }
+  footer a { color: var(--dim); }
+  footer a:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+  <h1>boaty and yashwant</h1>
+
+  <pre id="eye"></pre>
+
+  <footer>exebit &middot; <a href="https://github.com/Shawdotion/exebit.github.io">source</a></footer>
 
   <script>
+    const EYE_LINES = [
+      "   _.-\"\"\"\"-._",
+      "  /   .::::.   \\",
+      " |   ::(  )::   |",
+      "  \\   `::::`   /",
+      "   `-.,____,.-'"
+    ];
+    const CLOSED_LINES = [
+      "   _.-\"\"\"\"-._",
+      "  /            \\",
+      " |  ---------- |",
+      "  \\            /",
+      "   `-.,____,.-'"
+    ];
+    const OPEN = EYE_LINES.join("\n");
+    const CLOSED = CLOSED_LINES.join("\n");
+
+    const eye = document.getElementById('eye');
+    eye.textContent = OPEN;
+
+    function blink() {
+      eye.textContent = CLOSED;
+      setTimeout(() => { eye.textContent = OPEN; }, 140);
+    }
+
+    function scheduleNextBlink() {
+      const delay = 2200 + Math.random() * 2600;
+      setTimeout(() => {
+        blink();
+        if (Math.random() < 0.15) {
+          setTimeout(blink, 300);
+        }
+        scheduleNextBlink();
+      }, delay);
+    }
+
+    scheduleNextBlink();
+  </script>
+</body>
+</html>  <script>
     const OPEN = `   _.-""""-._
   /   .::::.   \
  |   ::(  )::   |
