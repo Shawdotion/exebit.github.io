@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>exebit &mdash; independent software studio</title>
-<meta name="description" content="exebit is an independent software studio building native applications for Apple platforms and the developer tools that support them.">
+<meta name="description" content="exebit is a two-person software studio building kura, a cooking app that turns a spoken recipe into a structured, editable card.">
 <meta property="og:title" content="exebit &mdash; independent software studio">
-<meta property="og:description" content="Native applications for Apple platforms, and the developer tools that support them.">
+<meta property="og:description" content="Building kura: speak a recipe, get a structured card you can edit, save and cook from.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://exebit.lol/">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='12' fill='none' stroke='%237dd3fc' stroke-width='2'/><circle cx='16' cy='16' r='4.5' fill='%237dd3fc'/></svg>">
@@ -18,9 +18,8 @@
   <div class="wrap nav-inner">
     <a class="brand" href="/"><span class="brand-mark">&#9673;</span><span class="brand-name">exebit</span></a>
     <nav class="nav-links">
-      <a href="#practice">Practice</a>
-      <a href="#work">Work</a>
-      <a href="#approach">Approach</a>
+      <a href="#kura">K&#363;ra</a>
+      <a href="#build">How it works</a>
       <a href="#studio">Studio</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -33,139 +32,124 @@
   <div class="wrap hero-inner">
     <pre id="eye" class="eye" aria-hidden="true"></pre>
     <p class="eyebrow">Independent software studio</p>
-    <h1>Software that pays attention.</h1>
-    <p class="lede">exebit builds native applications for Apple platforms &mdash; and the developer tools that make those applications faster to build, measure, and reason about.</p>
+    <h1>We&rsquo;re building k&#363;ra.</h1>
+    <p class="lede">exebit is Jeffrey Gatling and Yashwant. One project at a time: a cooking app that turns a spoken recipe into a structured card you can edit, save and cook from.</p>
     <div class="cta">
-      <a class="btn btn-primary" href="#work">See the work</a>
+      <a class="btn btn-primary" href="#kura">About k&#363;ra</a>
       <a class="btn" href="mailto:hello@exebit.lol">hello@exebit.lol</a>
     </div>
   </div>
-  <div class="strip" aria-hidden="true">
-    <div class="wrap strip-inner">
-      <span>Swift</span>
-      <span>SwiftUI</span>
-      <span>Metal</span>
-      <span>Rust</span>
-      <span>Go</span>
-      <span>iOS &middot; iPadOS &middot; macOS</span>
+</section>
+<section class="band kura" id="kura">
+  <div class="wrap">
+    <div class="kura-head">
+      <span class="kura-name">k&#363;ra</span>
+      <span class="chip live">In development</span>
+      <span class="kura-tag">iOS &amp; Android</span>
+    </div>
+    <div class="kura-top">
+      <div>
+        <p class="lede">Talk through a recipe the way you would tell it to someone in your kitchen. K&#363;ra transcribes what you said and pulls out the ingredients, steps, timings, tags and allergens as a card. The model drafts it; you correct it inline before it is saved. Typing gives you the same card, minus the microphone.</p>
+        <p class="lede">Learn and love to cook &mdash; without losing the recipe your grandmother only ever said out loud.</p>
+      </div>
+      <div class="mark-panel">
+        <svg viewBox="0 0 120 160" aria-label="The kura K, assembled from a spoon, fork and knife">
+          <line x1="30" y1="20" x2="30" y2="140" stroke="#F50000" stroke-width="13" stroke-linecap="round"/>
+          <line x1="36" y1="80" x2="94" y2="24" stroke="#C37233" stroke-width="13" stroke-linecap="round"/>
+          <line x1="36" y1="80" x2="94" y2="140" stroke="#FFC81E" stroke-width="13" stroke-linecap="round"/>
+        </svg>
+        <p class="mark-cap">The K is the navigation</p>
+      </div>
+    </div>
+
+    <div class="utensils">
+      <div class="utensil">
+        <span class="dot" style="background:#F50000"></span>
+        <div>
+          <div class="u-what">Spoon &middot; Cookbook</div>
+          <div class="u-sub">The spine of the K. Everything you have saved, searchable and offline.</div>
+        </div>
+        <span class="u-hex">#F50000</span>
+      </div>
+      <div class="utensil">
+        <span class="dot" style="background:#C37233"></span>
+        <div>
+          <div class="u-what">Fork &middot; Create</div>
+          <div class="u-sub">The top arm. Dictate a recipe or type it; review the card before saving.</div>
+        </div>
+        <span class="u-hex">#C37233</span>
+      </div>
+      <div class="utensil">
+        <span class="dot" style="background:#FFC81E"></span>
+        <div>
+          <div class="u-what">Knife &middot; Pantry</div>
+          <div class="u-sub">The bottom leg. Photograph your shelf and ask what you can cook tonight.</div>
+        </div>
+        <span class="u-hex">#FFC81E</span>
+      </div>
+    </div>
+    <p class="sub-h">What it does</p>
+    <div class="grid grid-2">
+      <div class="cell">
+        <h3>A cookbook that works offline</h3>
+        <p>Saved recipes are cached on the device: search, scale servings up or down, and work through cook-mode checklists with no signal in the kitchen.</p>
+      </div>
+      <div class="cell">
+        <h3>A pantry that can see</h3>
+        <p>Add items by typing them, or photograph the shelf and let vision identify what is there.</p>
+      </div>
+      <div class="cell">
+        <h3>&ldquo;What can I cook?&rdquo;</h3>
+        <p>Dishes ranked by how much of the recipe your pantry already covers, linked back to the matching recipes you have saved.</p>
+      </div>
+      <div class="cell">
+        <h3>Corrections that teach it</h3>
+        <p>Every edit you make to a generated card is diffed and stored, so the model gets better at the kind of cooking you actually do.</p>
+      </div>
     </div>
   </div>
 </section>
-<section class="band" id="practice">
+
+<section class="band kura" id="build">
   <div class="wrap">
-    <div class="section-head reveal">
-      <p class="eyebrow">Practice</p>
-      <h2>Four things we do well.</h2>
-      <p class="lede">We are deliberately narrow. Everything below shares the same underlying skill: getting close to the machine without losing sight of the person using it.</p>
-    </div>
-    <div class="grid grid-2 reveal">
-      <div class="cell">
-        <span class="num">01</span>
-        <h3>Apple platform applications</h3>
-        <p>Native iOS, iPadOS and macOS software written in Swift and SwiftUI. We care about launch time, scroll performance, and the small interaction details that separate an app that works from one people keep.</p>
-      </div>
-      <div class="cell">
-        <span class="num">02</span>
-        <h3>Developer tooling</h3>
-        <p>Command-line tools, instrumentation and libraries that shorten the distance between writing code and understanding what it actually did at runtime.</p>
-      </div>
-      <div class="cell">
-        <span class="num">03</span>
-        <h3>Systems &amp; performance</h3>
-        <p>Profiling, rendering and concurrency work &mdash; Metal, memory, threading &mdash; for the cases where the gap between acceptable and fast is architectural rather than incidental.</p>
-      </div>
-      <div class="cell">
-        <span class="num">04</span>
-        <h3>Interface research</h3>
-        <p>Prototypes exploring how dense information can be presented calmly: what to show, what to withhold, and when a screen should stay quiet.</p>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="band" id="work">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <p class="eyebrow">Work</p>
-      <h2>What we are building.</h2>
-      <p class="lede">We keep a short list on purpose. Each project below is developed and maintained in house; status is stated plainly rather than dressed up.</p>
+    <div class="section-head">
+      <p class="eyebrow">How it works</p>
+      <h2>Voice in, structured recipe out.</h2>
     </div>
 
-    <div class="work-list reveal">
-      <article class="work-item">
-        <div class="work-name">
-          <h3>Foveal</h3>
-          <span class="chip live">In development</span>
-        </div>
-        <div class="work-body">
-          <p>A precision capture tool for macOS. Select a region, annotate it, and hand off a legible artifact instead of a cropped screenshot and a paragraph of explanation. Built for design review, bug reports, and documentation that has to survive being read by someone else a month later.</p>
-          <p class="work-meta">macOS 14+ &middot; Swift, SwiftUI, Metal</p>
-        </div>
-      </article>
-
-      <article class="work-item">
-        <div class="work-name">
-          <h3>Saccade</h3>
-          <span class="chip">Open source</span>
-        </div>
-        <div class="work-body">
-          <p>A lightweight instrumentation layer for Swift applications. Structured traces, timing and lifecycle events, plus a local inspector that runs alongside the app so you can watch behaviour as it happens rather than reconstructing it from logs afterwards.</p>
-          <p class="work-meta">Swift package &middot; iOS, macOS</p>
-        </div>
-      </article>
-
-      <article class="work-item">
-        <div class="work-name">
-          <h3>Penumbra</h3>
-          <span class="chip">Early research</span>
-        </div>
-        <div class="work-body">
-          <p>An experiment in ambient interfaces: information that surfaces when it is relevant and gets out of the way when it is not. Currently a prototype we use ourselves while we work out whether the idea holds up outside of a demo.</p>
-          <p class="work-meta">iOS &middot; prototype</p>
-        </div>
-      </article>
+    <div class="pipeline">
+      <div class="step"><span class="s-k">01 &middot; Record</span><span class="s-v">Audio captured in the app and uploaded to private storage.</span></div>
+      <div class="step"><span class="s-k">02 &middot; Transcribe</span><span class="s-v">Deepgram returns a transcript of what you said.</span></div>
+      <div class="step"><span class="s-k">03 &middot; Structure</span><span class="s-v">Gemini turns loose speech into ingredients, steps, timers and tags.</span></div>
+      <div class="step"><span class="s-k">04 &middot; Review</span><span class="s-v">You edit the card inline. Nothing is saved until you say so.</span></div>
+      <div class="step"><span class="s-k">05 &middot; Store</span><span class="s-v">Postgres with row-level security, plus a local cache for offline use.</span></div>
     </div>
-  </div>
-</section>
-<section class="band" id="approach">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <p class="eyebrow">Approach</p>
-      <h2>How we work.</h2>
-    </div>
-    <div class="reveal">
-      <div class="principle">
-        <div class="p-num">01</div>
-        <div>
-          <h3>Ship less, and finish it.</h3>
-          <p>We would rather release one considered feature than five provisional ones. Scope is the largest single lever on quality, and it is the one most teams refuse to pull.</p>
-        </div>
-      </div>
-      <div class="principle">
-        <div class="p-num">02</div>
-        <div>
-          <h3>The people who design it, build it.</h3>
-          <p>There is no handoff here, so nothing is lost in one. Decisions about how something should feel are made by the same people who know what it will cost to implement.</p>
-        </div>
-      </div>
-      <div class="principle">
-        <div class="p-num">03</div>
-        <div>
-          <h3>Respect the machine and the person.</h3>
-          <p>Fast software is a courtesy. So is software that does not demand attention it has not earned &mdash; no manufactured urgency, no notifications written to serve us rather than the person receiving them.</p>
-        </div>
-      </div>
+
+    <p class="note">No API keys ship in the app bundle. The client holds only the public Supabase anon key; the Deepgram and Gemini keys live as Edge Function secrets, and every function verifies the caller&rsquo;s token before it does any work.</p>
+
+    <p class="sub-h">Built with</p>
+    <div class="stack">
+      <span class="tech">React Native</span>
+      <span class="tech">Expo Router</span>
+      <span class="tech">TypeScript</span>
+      <span class="tech">Zustand</span>
+      <span class="tech">Supabase</span>
+      <span class="tech">Postgres + RLS</span>
+      <span class="tech">Deno Edge Functions</span>
+      <span class="tech">Deepgram</span>
+      <span class="tech">Gemini</span>
     </div>
   </div>
 </section>
 <section class="band" id="studio">
   <div class="wrap split">
-    <div class="reveal">
+    <div>
       <p class="eyebrow">Studio</p>
-      <h2>Two people, on purpose.</h2>
-      <p class="lede">exebit is an independent software studio founded by Jeffrey Gatling and Yashwant. We design, build and maintain our own products, and occasionally take on outside work where it overlaps with what we are already good at.</p>
-      <p class="lede">Staying small keeps the feedback loop short and the software honest. There is no layer between the decision and the consequence, which is uncomfortable in exactly the way that produces better work.</p>
+      <h2>Two people.</h2>
+      <p class="lede">exebit is a small independent studio. We design, build and ship our own software, and we keep one project in front of us at a time so it actually gets finished.</p>
+      <p class="lede">If you want to talk about work, k&#363;ra, or anything adjacent, the address below reaches both of us.</p>
     </div>
-    <div class="team reveal">
+    <div class="team">
       <div class="person">
         <div class="avatar">JG</div>
         <div>
@@ -180,22 +164,15 @@
           <div class="role">Engineering</div>
         </div>
       </div>
-      <div class="person">
-        <div class="avatar">&#9673;</div>
-        <div>
-          <div class="who">Working with us</div>
-          <div class="role">hello@exebit.lol</div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
 
 <section class="band contact" id="contact">
-  <div class="wrap reveal">
+  <div class="wrap">
     <p class="eyebrow">Contact</p>
     <a class="mail" href="mailto:hello@exebit.lol">hello@exebit.lol</a>
-    <p class="lede" style="margin: 0 auto;">For project enquiries, support, or anything else. We read everything and answer within two business days.</p>
+    <p class="lede" style="margin: 0 auto;">Enquiries, support, or early access to k&#363;ra. We answer within two business days.</p>
   </div>
 </section>
 
@@ -208,7 +185,6 @@
       <a href="/support.html">Support</a>
       <a href="/privacy.html">Privacy</a>
       <a href="mailto:hello@exebit.lol">Email</a>
-      <a href="https://github.com/Shawdotion/exebit.github.io">GitHub</a>
     </nav>
   </div>
 </footer>
@@ -276,21 +252,6 @@
         loop();
       }, 2000 + Math.random() * 2600);
     })();
-  }
-
-  var items = document.querySelectorAll(".reveal");
-  if (reduced || !("IntersectionObserver" in window)) {
-    for (var i = 0; i < items.length; i++) items[i].classList.add("in");
-  } else {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("in");
-          io.unobserve(entry.target);
-        }
-      });
-    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
-    for (var j = 0; j < items.length; j++) io.observe(items[j]);
   }
 </script>
 
