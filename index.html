@@ -2,105 +2,297 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>boaty and yashwant</title>
-<style>
-  :root {
-    color-scheme: dark;
-    --bg: #0b0c0f;
-    --fg: #e8e8e8;
-    --dim: #6b7280;
-    --accent: #7dd3fc;
-  }
-  * { box-sizing: border-box; }
-  html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    background: var(--bg);
-    color: var(--fg);
-  }
-  body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
-    text-align: center;
-    gap: 1.75rem;
-    padding: 2rem;
-  }
-  h1 {
-    margin: 0;
-    font-size: clamp(1.1rem, 4vw, 2rem);
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: lowercase;
-    color: var(--fg);
-  }
-  #eye {
-    font-size: clamp(0.9rem, 2.4vw, 1.4rem);
-    line-height: 1.15;
-    white-space: pre;
-    color: var(--accent);
-    text-shadow: 0 0 18px rgba(125, 211, 252, 0.35);
-    user-select: none;
-  }
-  footer {
-    font-size: 0.75rem;
-    color: var(--dim);
-    letter-spacing: 0.04em;
-  }
-  footer a { color: var(--dim); }
-  footer a:hover { color: var(--accent); }
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>exebit &mdash; independent software studio</title>
+<meta name="description" content="exebit is an independent software studio building native applications for Apple platforms and the developer tools that support them.">
+<meta property="og:title" content="exebit &mdash; independent software studio">
+<meta property="og:description" content="Native applications for Apple platforms, and the developer tools that support them.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://exebit.lol/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='12' fill='none' stroke='%237dd3fc' stroke-width='2'/><circle cx='16' cy='16' r='4.5' fill='%237dd3fc'/></svg>">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>boaty and yashwant</h1>
 
-  <pre id="eye"></pre>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="/"><span class="brand-mark">&#9673;</span><span class="brand-name">exebit</span></a>
+    <nav class="nav-links">
+      <a href="#practice">Practice</a>
+      <a href="#work">Work</a>
+      <a href="#approach">Approach</a>
+      <a href="#studio">Studio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
-  <footer>exebit &middot; <a href="https://github.com/Shawdotion/exebit.github.io">source</a></footer>
+<main>
 
-  <script>
-    const EYE_LINES = [
-      "   _.-\"\"\"\"-._",
-      "  /   .::::.   \\",
-      " |   ::(  )::   |",
-      "  \\   `::::`   /",
-      "   `-.,____,.-'"
-    ];
-    const CLOSED_LINES = [
-      "   _.-\"\"\"\"-._",
-      "  /            \\",
-      " |  ---------- |",
-      "  \\            /",
-      "   `-.,____,.-'"
-    ];
-    const OPEN = EYE_LINES.join("\n");
-    const CLOSED = CLOSED_LINES.join("\n");
+<section class="hero">
+  <div class="wrap hero-inner">
+    <pre id="eye" class="eye" aria-hidden="true"></pre>
+    <p class="eyebrow">Independent software studio</p>
+    <h1>Software that pays attention.</h1>
+    <p class="lede">exebit builds native applications for Apple platforms &mdash; and the developer tools that make those applications faster to build, measure, and reason about.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#work">See the work</a>
+      <a class="btn" href="mailto:hello@exebit.lol">hello@exebit.lol</a>
+    </div>
+  </div>
+  <div class="strip" aria-hidden="true">
+    <div class="wrap strip-inner">
+      <span>Swift</span>
+      <span>SwiftUI</span>
+      <span>Metal</span>
+      <span>Rust</span>
+      <span>Go</span>
+      <span>iOS &middot; iPadOS &middot; macOS</span>
+    </div>
+  </div>
+</section>
+<section class="band" id="practice">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Practice</p>
+      <h2>Four things we do well.</h2>
+      <p class="lede">We are deliberately narrow. Everything below shares the same underlying skill: getting close to the machine without losing sight of the person using it.</p>
+    </div>
+    <div class="grid grid-2 reveal">
+      <div class="cell">
+        <span class="num">01</span>
+        <h3>Apple platform applications</h3>
+        <p>Native iOS, iPadOS and macOS software written in Swift and SwiftUI. We care about launch time, scroll performance, and the small interaction details that separate an app that works from one people keep.</p>
+      </div>
+      <div class="cell">
+        <span class="num">02</span>
+        <h3>Developer tooling</h3>
+        <p>Command-line tools, instrumentation and libraries that shorten the distance between writing code and understanding what it actually did at runtime.</p>
+      </div>
+      <div class="cell">
+        <span class="num">03</span>
+        <h3>Systems &amp; performance</h3>
+        <p>Profiling, rendering and concurrency work &mdash; Metal, memory, threading &mdash; for the cases where the gap between acceptable and fast is architectural rather than incidental.</p>
+      </div>
+      <div class="cell">
+        <span class="num">04</span>
+        <h3>Interface research</h3>
+        <p>Prototypes exploring how dense information can be presented calmly: what to show, what to withhold, and when a screen should stay quiet.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="band" id="work">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Work</p>
+      <h2>What we are building.</h2>
+      <p class="lede">We keep a short list on purpose. Each project below is developed and maintained in house; status is stated plainly rather than dressed up.</p>
+    </div>
 
-    const eye = document.getElementById('eye');
-    eye.textContent = OPEN;
+    <div class="work-list reveal">
+      <article class="work-item">
+        <div class="work-name">
+          <h3>Foveal</h3>
+          <span class="chip live">In development</span>
+        </div>
+        <div class="work-body">
+          <p>A precision capture tool for macOS. Select a region, annotate it, and hand off a legible artifact instead of a cropped screenshot and a paragraph of explanation. Built for design review, bug reports, and documentation that has to survive being read by someone else a month later.</p>
+          <p class="work-meta">macOS 14+ &middot; Swift, SwiftUI, Metal</p>
+        </div>
+      </article>
+
+      <article class="work-item">
+        <div class="work-name">
+          <h3>Saccade</h3>
+          <span class="chip">Open source</span>
+        </div>
+        <div class="work-body">
+          <p>A lightweight instrumentation layer for Swift applications. Structured traces, timing and lifecycle events, plus a local inspector that runs alongside the app so you can watch behaviour as it happens rather than reconstructing it from logs afterwards.</p>
+          <p class="work-meta">Swift package &middot; iOS, macOS</p>
+        </div>
+      </article>
+
+      <article class="work-item">
+        <div class="work-name">
+          <h3>Penumbra</h3>
+          <span class="chip">Early research</span>
+        </div>
+        <div class="work-body">
+          <p>An experiment in ambient interfaces: information that surfaces when it is relevant and gets out of the way when it is not. Currently a prototype we use ourselves while we work out whether the idea holds up outside of a demo.</p>
+          <p class="work-meta">iOS &middot; prototype</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="band" id="approach">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Approach</p>
+      <h2>How we work.</h2>
+    </div>
+    <div class="reveal">
+      <div class="principle">
+        <div class="p-num">01</div>
+        <div>
+          <h3>Ship less, and finish it.</h3>
+          <p>We would rather release one considered feature than five provisional ones. Scope is the largest single lever on quality, and it is the one most teams refuse to pull.</p>
+        </div>
+      </div>
+      <div class="principle">
+        <div class="p-num">02</div>
+        <div>
+          <h3>The people who design it, build it.</h3>
+          <p>There is no handoff here, so nothing is lost in one. Decisions about how something should feel are made by the same people who know what it will cost to implement.</p>
+        </div>
+      </div>
+      <div class="principle">
+        <div class="p-num">03</div>
+        <div>
+          <h3>Respect the machine and the person.</h3>
+          <p>Fast software is a courtesy. So is software that does not demand attention it has not earned &mdash; no manufactured urgency, no notifications written to serve us rather than the person receiving them.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="band" id="studio">
+  <div class="wrap split">
+    <div class="reveal">
+      <p class="eyebrow">Studio</p>
+      <h2>Two people, on purpose.</h2>
+      <p class="lede">exebit is an independent software studio founded by Jeffrey Gatling and Yashwant. We design, build and maintain our own products, and occasionally take on outside work where it overlaps with what we are already good at.</p>
+      <p class="lede">Staying small keeps the feedback loop short and the software honest. There is no layer between the decision and the consequence, which is uncomfortable in exactly the way that produces better work.</p>
+    </div>
+    <div class="team reveal">
+      <div class="person">
+        <div class="avatar">JG</div>
+        <div>
+          <div class="who">Jeffrey Gatling</div>
+          <div class="role">Engineering &amp; design</div>
+        </div>
+      </div>
+      <div class="person">
+        <div class="avatar">Y</div>
+        <div>
+          <div class="who">Yashwant</div>
+          <div class="role">Engineering</div>
+        </div>
+      </div>
+      <div class="person">
+        <div class="avatar">&#9673;</div>
+        <div>
+          <div class="who">Working with us</div>
+          <div class="role">hello@exebit.lol</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band contact" id="contact">
+  <div class="wrap reveal">
+    <p class="eyebrow">Contact</p>
+    <a class="mail" href="mailto:hello@exebit.lol">hello@exebit.lol</a>
+    <p class="lede" style="margin: 0 auto;">For project enquiries, support, or anything else. We read everything and answer within two business days.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot-inner">
+    <div>&copy; 2026 exebit. All rights reserved.</div>
+    <nav class="foot-links">
+      <a href="/support.html">Support</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="mailto:hello@exebit.lol">Email</a>
+      <a href="https://github.com/Shawdotion/exebit.github.io">GitHub</a>
+    </nav>
+  </div>
+</footer>
+<script>
+  var OPEN = [
+    "   _.-\"\"\"\"-._",
+    "  /   .::::.   \\",
+    " |   ::(  )::   |",
+    "  \\   `::::`   /",
+    "   `-.,____,.-'"
+  ];
+  var LEFT = [
+    "   _.-\"\"\"\"-._",
+    "  /   .::::.   \\",
+    " |  ::(  )::    |",
+    "  \\   `::::`   /",
+    "   `-.,____,.-'"
+  ];
+  var RIGHT = [
+    "   _.-\"\"\"\"-._",
+    "  /   .::::.   \\",
+    " |    ::(  )::  |",
+    "  \\   `::::`   /",
+    "   `-.,____,.-'"
+  ];
+  var SHUT = [
+    "   _.-\"\"\"\"-._",
+    "  /            \\",
+    " |  ---------- |",
+    "  \\            /",
+    "   `-.,____,.-'"
+  ];
+
+  var eye = document.getElementById("eye");
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function draw(frame) { eye.textContent = frame.join("\n"); }
+  draw(OPEN);
+
+  if (!reduced) {
+    var resting = OPEN;
 
     function blink() {
-      eye.textContent = CLOSED;
-      setTimeout(() => { eye.textContent = OPEN; }, 140);
+      draw(SHUT);
+      setTimeout(function () { draw(resting); }, 130);
     }
 
-    function scheduleNextBlink() {
-      const delay = 2200 + Math.random() * 2600;
-      setTimeout(() => {
-        blink();
-        if (Math.random() < 0.15) {
-          setTimeout(blink, 300);
+    function glance() {
+      resting = Math.random() < 0.5 ? LEFT : RIGHT;
+      draw(resting);
+      setTimeout(function () {
+        resting = OPEN;
+        draw(resting);
+      }, 900 + Math.random() * 700);
+    }
+
+    (function loop() {
+      setTimeout(function () {
+        if (Math.random() < 0.28) {
+          glance();
+        } else {
+          blink();
+          if (Math.random() < 0.15) setTimeout(blink, 300);
         }
-        scheduleNextBlink();
-      }, delay);
-    }
+        loop();
+      }, 2000 + Math.random() * 2600);
+    })();
+  }
 
-    scheduleNextBlink();
-  </script>
+  var items = document.querySelectorAll(".reveal");
+  if (reduced || !("IntersectionObserver" in window)) {
+    for (var i = 0; i < items.length; i++) items[i].classList.add("in");
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+    for (var j = 0; j < items.length; j++) io.observe(items[j]);
+  }
+</script>
+
 </body>
 </html>
